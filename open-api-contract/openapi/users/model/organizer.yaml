@@ -1,0 +1,7 @@
+Course:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      $ref: 'fields/username.yaml'

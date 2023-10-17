@@ -1,0 +1,52 @@
+#post:
+#  description: Create new user
+#  operationId: createUser
+#  requestBody:
+#    content:
+#      application/json:
+#        schema:
+#          $ref: 'request/create-user.yaml#/NewUserRequest'
+#  responses:
+#    '201':
+#      description: New user created
+#      content:
+#        application/json:
+#          schema:
+#            $ref: '../common/model/user.yaml#/AppUser'
+#    '409':
+#      $ref: '../../api-error.yml#/ApiError'
+#    'default':
+#      $ref: '../../api-error.yml#/ApiError'
+#
+#get:
+#  description: get current authenticated user information
+#  operationId: getCurrentUserInfo
+#  responses:
+#    '200':
+#      description: user given
+#      content:
+#        application/json:
+#          schema:
+#            $ref: 'model/user.yml#/AppUser'
+##    '404':
+##      $ref: '../../api-error.yml#/ApiError'
+#  security:
+#    - bearerAuth: [ ]
+
+#post:
+#  summary: Create a new learner account
+#  requestBody:
+#    $ref: './requests/create-user-request.yaml'
+#  responses:
+#    201:
+#      description: Created
+#      content:
+#        application/json:
+#          schema:
+#            $ref: 'response/create-learner-response.yaml'
+#    400:
+#      description: Bad Request
+#      content:
+#        application/json:
+#          schema:
+#            $ref: response/error-response.yaml

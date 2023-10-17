@@ -1,0 +1,38 @@
+get:
+  description: get course by its id
+  operationId: getCourseById
+  parameters:
+    - name: id
+      in: query
+      description: id of the required course
+      required: true
+      schema:
+        type: integer
+        # default: 1
+  responses:
+    '200':
+      description: course object returned
+      content:
+        application/json:
+          schema:
+            $ref: 'model/course.yaml#/Course'
+    '404':
+      $ref: '../api-error.yaml#/ApiError'
+
+post:
+  description: Create new course
+  operationId: createCourse
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: 'request/course-request.yaml#/NewCourseRequest'
+  responses:
+    '201':
+      description: New course created
+      content:
+        application/json:
+          schema:
+            $ref: 'model/course.yaml#/Course'
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

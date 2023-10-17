@@ -1,0 +1,11 @@
+NewCourseRequest:
+  type: object
+  required:
+    - name
+    - owner_id
+  properties:
+    name:
+      type: string
+    owner_id:
+      type: integer
+      format: int32

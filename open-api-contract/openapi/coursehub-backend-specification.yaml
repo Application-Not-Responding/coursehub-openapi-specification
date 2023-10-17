@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: CourseHub API Specification
+  description: This API provides basic operations for CourseHub application such as creating an account, editing and accessing courses.
+  version: 1.0.0
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  #  user endpoints
+#  /user/create-learner:
+#    $ref: users/path-create-learner.yaml
+
+  /course:
+    $ref: course/course-endpoints.yaml
+
+  # create course
+  # get course
+
+
+#tags:
+#  - name: users
+#    description: Operations related to account
+#  - name: course
+#    description: Operations related to courses
+#  - name: feedback
+#    description: Operations related to feedback
+  # user endpoints
+#    post:
+#      summary: Create a new learner account
+#      requestBody:
+#        $ref: /users/request/create-learner-request.yaml
+#      responses:
+#        201:
+#          description: Created
+#          content:
+#            application/json:
+#              schema:
+#                #$ref: './responses/user-response.yaml'
+#        400:
+#          description: Bad Request
+#          content:
+#            application/json:
+#              schema:
+#                #$ref: './responses/error-response.yaml'
+
+#  /user/create-organizer:
+#    $ref:
+#  /user/login:
+#    $ref:
+#  /user/change-password:
+#    $ref:
+#
+#  # course endpoints
+#  /course/create:
+#    $ref:
+#  /course/search:
+#    $ref:

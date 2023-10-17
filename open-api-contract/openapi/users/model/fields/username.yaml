@@ -1,0 +1,5 @@
+UserName:
+  type: string
+  minLength: 6
+  maxLength: 128
+  example: max
