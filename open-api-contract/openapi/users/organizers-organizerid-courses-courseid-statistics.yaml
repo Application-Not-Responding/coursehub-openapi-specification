@@ -1,5 +1,6 @@
 get:
   summary: Monitor statistics
+  operationId: getStatisticsByOrganizerId
   tags:
     - Courses
   parameters:

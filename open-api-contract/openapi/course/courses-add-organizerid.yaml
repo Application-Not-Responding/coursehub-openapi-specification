@@ -1,25 +1,26 @@
 post:
-  summary: Add course to active list
-  operationId: addCourseToActive
+  summary: Create a new course
+  operationId: addCourse
   tags:
     - Courses
   parameters:
-    - name: studentId
+    - name: organizerId
       in: path
       required: true
       schema:
         type: integer
+      description: ID of the organizer
   requestBody:
     content:
       application/json:
         schema:
-          $ref: '../course/model/course.yaml#/Course'
+          $ref: 'request/course-request.yaml#/NewCourseRequest'
   responses:
     '201':
-      description: Course added to active list
+      description: New course created
       content:
         application/json:
           schema:
-            $ref: '../course/model/course.yaml#/Course'
+            $ref: 'model/course.yaml#/Course'
     'default':
       $ref: '../api-error.yaml#/ApiError'

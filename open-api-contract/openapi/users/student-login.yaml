@@ -1,6 +1,6 @@
 post:
-  summary: Organizer login
-  operationId: loginOrganizer
+  summary: Student login
+  operationId: loginStudent
   tags:
     - Users
   requestBody:
@@ -8,7 +8,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: 'model/organizer.yaml#/Organizer'
+          $ref: 'model/student.yaml#/Student'
   responses:
     200:
       description: Login successful

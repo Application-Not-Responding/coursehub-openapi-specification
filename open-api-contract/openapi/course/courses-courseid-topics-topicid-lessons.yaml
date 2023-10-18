@@ -1,5 +1,6 @@
 post:
   summary: Add lessons in folders
+  operationId: addLessonInTopic
   tags:
     - Courses
   parameters:

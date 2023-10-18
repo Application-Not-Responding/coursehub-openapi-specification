@@ -1,5 +1,6 @@
 get:
   summary: Retrieve course details
+  operationId: getCourseById
   tags:
     - Courses
   parameters:

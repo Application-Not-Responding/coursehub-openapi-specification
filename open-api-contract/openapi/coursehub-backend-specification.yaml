@@ -20,9 +20,9 @@ paths:
   #  user endpoints
   #  /user/create-student:
   #    $ref: users/path-create-student.yaml
-
-  /api/v1/course:
-    $ref: course/course-endpoints.yaml
+#
+#  /api/v1/course:
+#    $ref: course/course-endpoints.yaml
 
   /api/v1/courses:
     $ref: course/courses-endpoint.yaml
@@ -52,8 +52,8 @@ paths:
   /api/v1/organizers/login:
     $ref: users/organizer-login.yaml
 
-  /api/v1/organizers/{organizerId}/courses:
-    $ref: users/organizers-organizerid-courses.yaml
+  /api/v1/course/add/{organizerId}:
+    $ref: course/courses-add-organizerid.yaml
 
   /api/v1/organizers/{organizerId}/courses/{courseId}:
     $ref: users/organizers-organizerid-courses-courseid.yaml

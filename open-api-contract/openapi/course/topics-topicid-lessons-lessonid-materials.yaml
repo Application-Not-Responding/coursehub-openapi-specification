@@ -1,5 +1,6 @@
 get:
   summary: Read or watch lesson materials
+  operationId: getMaterialsByTopicIdAndLessonId
   tags:
     - Courses
   parameters:

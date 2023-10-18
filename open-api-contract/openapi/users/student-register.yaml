@@ -1,6 +1,6 @@
 post:
-  summary: Organizer login
-  operationId: loginOrganizer
+  summary: Student registration
+  operationId: registerStudent
   tags:
     - Users
   requestBody:
@@ -8,9 +8,9 @@ post:
     content:
       application/json:
         schema:
-          $ref: 'model/organizer.yaml#/Organizer'
+          $ref: 'model/student.yaml#/Student'
   responses:
-    200:
-      description: Login successful
+    201:
+      description: Registration successful
     'default':
       $ref: '../api-error.yaml#/ApiError'

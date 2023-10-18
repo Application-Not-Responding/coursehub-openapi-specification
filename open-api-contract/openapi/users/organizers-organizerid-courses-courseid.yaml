@@ -1,5 +1,6 @@
 put:
   summary: Edit a course
+  operationId: editCourse
   tags:
     - Courses
   parameters:
@@ -23,6 +24,7 @@ put:
 
 delete:
   summary: Close the course
+  operationId: deleteCourseById
   tags:
     - Courses
   parameters:

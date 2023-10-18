@@ -1,5 +1,6 @@
 get:
   summary: View reviews on the course
+  operationId: getFeedback
   tags:
     - Feedback
   parameters:
@@ -19,6 +20,7 @@ get:
 
 post:
   summary: Leave feedback on a course
+  operationId: addFeedback
   tags:
     - Feedback
   parameters:

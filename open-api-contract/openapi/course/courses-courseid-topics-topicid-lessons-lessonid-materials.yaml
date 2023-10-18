@@ -1,5 +1,6 @@
 post:
   summary: Add text, files, and videos to lessons
+  operationId: addMaterialInLesson
   tags:
     - Courses
   parameters:

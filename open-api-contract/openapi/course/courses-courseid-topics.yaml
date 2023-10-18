@@ -1,5 +1,6 @@
 get:
   summary: Select topic, unit, folders, and lessons
+  operationId: getTopicsByCourseId
   tags:
     - Courses
   parameters:
@@ -18,7 +19,8 @@ get:
             $ref: 'model/topic.yaml#/Topic'
 
 post:
-  summary: Create folders (Assuming folders represent topics)
+  summary: Create folders
+  operationId: addTopic
   tags:
     - Courses
   parameters:
