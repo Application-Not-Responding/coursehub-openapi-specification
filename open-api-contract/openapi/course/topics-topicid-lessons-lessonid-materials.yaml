@@ -1,0 +1,26 @@
+get:
+  summary: Read or watch lesson materials
+  tags:
+    - Courses
+  parameters:
+    - name: topicId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the topic
+    - name: lessonId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the lesson
+  responses:
+    200:
+      description: Lesson materials
+      content:
+        application/json:
+          schema:
+            type: string
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

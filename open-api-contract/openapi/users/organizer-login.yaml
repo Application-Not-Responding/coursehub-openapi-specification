@@ -1,0 +1,15 @@
+post:
+  summary: Organizer login
+  tags:
+    - Users
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/organizer.yaml#/Organizer'
+  responses:
+    200:
+      description: Login successful
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

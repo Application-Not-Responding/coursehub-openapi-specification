@@ -1,0 +1,43 @@
+get:
+  summary: Select topic, unit, folders, and lessons
+  tags:
+    - Courses
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  responses:
+    200:
+      description: List of topics, units, folders, and lessons
+      content:
+        application/json:
+          schema:
+            $ref: 'model/topic.yaml#/Topic'
+
+post:
+  summary: Create folders (Assuming folders represent topics)
+  tags:
+    - Courses
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/topic.yaml#/Topic'
+  responses:
+    201:
+      description: Folders created
+    400:
+      $ref: '../api-error.yaml#/ApiError'
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

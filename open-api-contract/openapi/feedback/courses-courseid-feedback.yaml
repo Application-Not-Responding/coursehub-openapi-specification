@@ -1,0 +1,43 @@
+get:
+  summary: View reviews on the course
+  tags:
+    - Feedback
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  responses:
+    200:
+      description: Course reviews
+      content:
+        application/json:
+          schema:
+            $ref: 'model/feedback.yaml#/Feedback'
+
+post:
+  summary: Leave feedback on a course
+  tags:
+    - Feedback
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/feedback.yaml#/Feedback'
+  responses:
+    201:
+      description: Feedback submitted
+    400:
+      description: Bad request
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

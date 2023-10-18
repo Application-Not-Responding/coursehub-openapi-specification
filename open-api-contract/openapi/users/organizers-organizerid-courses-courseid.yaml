@@ -1,0 +1,45 @@
+put:
+  summary: Edit a course
+  tags:
+    - Courses
+  parameters:
+    - name: organizerId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the organizer
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  responses:
+    200:
+      description: Course edited
+    400:
+      description: Bad request
+
+delete:
+  summary: Close the course
+  tags:
+    - Courses
+  parameters:
+    - name: organizerId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the organizer
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+  responses:
+    204:
+      description: Course closed
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

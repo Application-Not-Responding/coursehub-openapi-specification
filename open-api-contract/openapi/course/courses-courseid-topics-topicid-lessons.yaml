@@ -1,0 +1,28 @@
+post:
+  summary: Add lessons in folders
+  tags:
+    - Courses
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the course
+    - name: topicId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: ID of the topic
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/lesson.yaml#/Lesson'
+  responses:
+    201:
+      description: Lessons added
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

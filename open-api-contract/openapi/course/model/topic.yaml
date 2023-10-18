@@ -1,4 +1,4 @@
-Course:
+Topic:
   type: object
   required:
     - id
@@ -7,10 +7,11 @@ Course:
     id:
       type: integer
       format: int32
-      example: 10
-    name:
-      $ref: 'fields/name.yaml#/CourseName'
-    owner_id:
+      example: 101
+    course_id:
       type: integer
       format: int32
-      example: 1
+      example: 10
+    name:
+      type: string
+      example: Algebra

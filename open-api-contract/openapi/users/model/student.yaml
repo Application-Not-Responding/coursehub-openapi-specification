@@ -1,4 +1,4 @@
-Organizer:
+Student:
   type: object
   required:
     - id
@@ -8,10 +8,10 @@ Organizer:
     id:
       type: integer
       format: int32
-      example: 1
+      example: 2
     username:
       type: string
-      example: organizer123
+      example: student123
     password:
       type: string
-      example: securePass123
+      example: studentPass123

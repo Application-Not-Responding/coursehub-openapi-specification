@@ -1,0 +1,24 @@
+post:
+  summary: Add course to active list
+  tags:
+    - Courses
+  parameters:
+    - name: studentId
+      in: path
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../course/model/course.yaml#/Course'
+  responses:
+    '201':
+      description: Course added to active list
+      content:
+        application/json:
+          schema:
+            $ref: '../course/model/course.yaml#/Course'
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

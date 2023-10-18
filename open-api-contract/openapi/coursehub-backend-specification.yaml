@@ -3,36 +3,80 @@ info:
   title: CourseHub API Specification
   description: This API provides basic operations for CourseHub application such as creating an account, editing and accessing courses.
   version: 1.0.0
-components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+#components:
+#  securitySchemes:
+#    bearerAuth:
+#      type: http
+#      scheme: bearer
+#      bearerFormat: JWT
+tags:
+  - name: Users
+    description: Operations related to account
+  - name: Courses
+    description: Operations related to courses
+  - name: Feedback
+    description: Operations related to feedback
 paths:
   #  user endpoints
-#  /user/create-learner:
-#    $ref: users/path-create-learner.yaml
+  #  /user/create-student:
+  #    $ref: users/path-create-student.yaml
 
-  /course:
+  /api/v1/course:
     $ref: course/course-endpoints.yaml
+
+  /api/v1/courses:
+    $ref: course/courses-endpoint.yaml
+
+  /api/v1/courses/{courseId}:
+    $ref: course/courses-courseid-endpoint.yaml
+
+  /api/v1/student/{studentId}/active-courses:
+    $ref: users/student-studentid-active-courses.yaml
+
+  /api/v1/courses/{courseId}/topics:
+    $ref: course/courses-courseid-topics.yaml
+
+  /api/v1/topics/{topicId}/lessons/{lessonId}/materials:
+    $ref: course/topics-topicid-lessons-lessonid-materials.yaml
+
+  /api/v1/student/{studentId}/completed-lessons:
+    $ref: course/student-studentid-completed-lessons.yaml
+
+  /api/v1/courses/{courseId}/feedback:
+    $ref: feedback/courses-courseid-feedback.yaml
+
+    # For Organizers
+  /api/v1/organizers/register:
+    $ref: users/organizer-register.yaml
+
+  /api/v1/organizers/login:
+    $ref: users/organizer-login.yaml
+
+  /api/v1/organizers/{organizerId}/courses:
+    $ref: users/organizers-organizerid-courses.yaml
+
+  /api/v1/organizers/{organizerId}/courses/{courseId}:
+    $ref: users/organizers-organizerid-courses-courseid.yaml
+
+  /api/v1/courses/{courseId}/topics/{topicId}/lessons/{lessonId}/materials:
+    $ref: course/courses-courseid-topics-topicid-lessons-lessonid-materials.yaml
+
+  /api/v1/courses/{courseId}/topics/{topicId}/lessons:
+    $ref: course/courses-courseid-topics-topicid-lessons.yaml
+
+  /api/v1/organizers/{organizerId}/courses/{courseId}/statistics:
+    $ref: users/organizers-organizerid-courses-courseid-statistics.yaml
+
 
   # create course
   # get course
 
 
-#tags:
-#  - name: users
-#    description: Operations related to account
-#  - name: course
-#    description: Operations related to courses
-#  - name: feedback
-#    description: Operations related to feedback
   # user endpoints
 #    post:
-#      summary: Create a new learner account
+#      summary: Create a new student account
 #      requestBody:
-#        $ref: /users/request/create-learner-request.yaml
+#        $ref: /users/request/create-student-request.yaml
 #      responses:
 #        201:
 #          description: Created

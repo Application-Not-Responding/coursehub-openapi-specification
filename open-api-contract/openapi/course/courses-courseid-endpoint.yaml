@@ -1,0 +1,21 @@
+get:
+  summary: Retrieve course details
+  tags:
+    - Courses
+  parameters:
+    - name: courseId
+      in: path
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: Course details
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: 'model/course.yaml#/Course'
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

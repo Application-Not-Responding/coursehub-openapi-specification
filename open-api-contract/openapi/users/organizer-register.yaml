@@ -1,0 +1,15 @@
+post:
+  summary: Organizer registration
+  tags:
+    - Users
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: 'model/organizer.yaml#/Organizer'
+  responses:
+    201:
+      description: Registration successful
+    'default':
+      $ref: '../api-error.yaml#/ApiError'

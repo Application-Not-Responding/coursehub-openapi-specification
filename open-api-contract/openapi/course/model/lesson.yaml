@@ -1,0 +1,20 @@
+Lesson:
+  type: object
+  required:
+    - id
+    - name
+  properties:
+    id:
+      type: integer
+      format: int32
+      example: 1001
+    topic_id:
+      type: integer
+      format: int32
+      example: 101
+    name:
+      type: string
+      example: Linear Equations
+    materials:
+      type: string
+      example: Notes on linear equations

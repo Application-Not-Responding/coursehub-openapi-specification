@@ -34,7 +34,7 @@
 #    - bearerAuth: [ ]
 
 #post:
-#  summary: Create a new learner account
+#  summary: Create a new student account
 #  requestBody:
 #    $ref: './requests/create-user-request.yaml'
 #  responses:
@@ -43,7 +43,7 @@
 #      content:
 #        application/json:
 #          schema:
-#            $ref: 'response/create-learner-response.yaml'
+#            $ref: 'response/create-student-response.yaml'
 #    400:
 #      description: Bad Request
 #      content:
