@@ -25,5 +25,5 @@ post:
   responses:
     201:
       description: Lessons added
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

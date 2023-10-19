@@ -15,8 +15,6 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              $ref: 'model/course.yaml#/Course'
-    'default':
+            $ref: 'model/course.yaml#/Course'
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

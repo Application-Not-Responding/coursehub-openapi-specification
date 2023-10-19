@@ -12,5 +12,5 @@ post:
   responses:
     200:
       description: Login successful
-    'default':
+    400:
       $ref: '../api-error.yaml#/ApiError'

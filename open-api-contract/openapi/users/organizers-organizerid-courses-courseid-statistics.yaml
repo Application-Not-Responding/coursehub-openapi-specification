@@ -23,5 +23,5 @@ get:
         application/json:
           schema:
             type: string
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

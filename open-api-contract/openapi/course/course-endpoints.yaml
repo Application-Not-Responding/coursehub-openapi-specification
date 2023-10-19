@@ -36,5 +36,5 @@
 #        application/json:
 #          schema:
 #            $ref: 'model/course.yaml#/Course'
-#    'default':
+#    4XX:
 #      $ref: '../api-error.yaml#/ApiError'

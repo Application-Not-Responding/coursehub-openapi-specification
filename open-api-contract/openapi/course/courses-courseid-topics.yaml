@@ -41,5 +41,5 @@ post:
       description: Folders created
     400:
       $ref: '../api-error.yaml#/ApiError'
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

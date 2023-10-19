@@ -43,5 +43,5 @@ delete:
   responses:
     204:
       description: Course closed
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

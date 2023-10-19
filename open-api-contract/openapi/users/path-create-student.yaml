@@ -15,7 +15,7 @@
 #            $ref: '../common/model/user.yaml#/AppUser'
 #    '409':
 #      $ref: '../../api-error.yml#/ApiError'
-#    'default':
+#    4XX:
 #      $ref: '../../api-error.yml#/ApiError'
 #
 #get:

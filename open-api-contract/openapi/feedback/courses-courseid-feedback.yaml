@@ -41,5 +41,5 @@ post:
       description: Feedback submitted
     400:
       description: Bad request
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

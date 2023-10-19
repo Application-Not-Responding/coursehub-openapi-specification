@@ -31,5 +31,5 @@ post:
   responses:
     201:
       description: Materials added
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

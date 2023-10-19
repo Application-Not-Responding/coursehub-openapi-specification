@@ -12,5 +12,5 @@ post:
   responses:
     201:
       description: Registration successful
-    'default':
+    4XX:
       $ref: '../api-error.yaml#/ApiError'

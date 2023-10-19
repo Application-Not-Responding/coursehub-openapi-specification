@@ -45,6 +45,13 @@ paths:
   /api/v1/courses/{courseId}/feedback:
     $ref: feedback/courses-courseid-feedback.yaml
 
+
+  /api/v1/student/register:
+    $ref: users/student-register.yaml
+
+  /api/v1/student/login:
+    $ref: users/student-login.yaml
+
     # For Organizers
   /api/v1/organizers/register:
     $ref: users/organizer-register.yaml
